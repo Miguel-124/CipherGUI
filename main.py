@@ -1,13 +1,17 @@
 import tkinter as tk
 import sys
+from Caesar import CaesarCipher
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+operating_system = sys.platform
+root = tk.Tk()
+caesar_cipher_app = CaesarCipher(root)
+root.title = 'Caesar Cipher'
+root.geometry('800x450')
 
+root.resizable(width=False, height=False)
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
+    root.mainloop()
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
