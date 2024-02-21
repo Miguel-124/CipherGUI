@@ -113,3 +113,5 @@ class CaesarCipher(tk.Frame):
         )
 
         self.key_entry.grid(column=1, row=0, ipady=9)
+
+    def encrypt_decrypt(self, text, mode, key): ...
