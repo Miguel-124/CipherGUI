@@ -75,7 +75,8 @@ class CaesarCipher(tk.Frame):
             cursor='hand1',
             highlightthickness=0,
             border=0,
-            state=tk.DISABLED
+            state=tk.DISABLED,
+            command=self.encrypt_command
         )
 
         self.button_encript.grid(column=0, row=0, ipadx=5, ipady=5)
@@ -93,7 +94,8 @@ class CaesarCipher(tk.Frame):
             cursor='hand1',
             highlightthickness=0,
             border=0,
-            state=tk.DISABLED
+            state=tk.DISABLED,
+            command=self.decrypt_command
         )
 
         self.button_decript.grid(column=2, row=0, ipadx=5, ipady=5)
@@ -163,3 +165,15 @@ class CaesarCipher(tk.Frame):
         self.button_encript['state'] = tk.NORMAL
 
         return True
+
+    def encrypt_command(self):
+        key = self.key_entry.get()
+        text = self.text_widget.get('1.0', tk.END)
+        self.text_widget.delete('1.0', tk.END)
+        self.text_widget.insert('1.0', self.encrypt_decrypt(text, 'e', int(key)))
+
+    def decrypt_command(self):
+        key = self.key_entry.get()
+        text = self.text_widget.get('1.0', tk.END)
+        self.text_widget.delete('1.0', tk.END)
+        self.text_widget.insert('1.0', self.encrypt_decrypt(text, 'd', int(key)))
