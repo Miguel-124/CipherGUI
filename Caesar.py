@@ -27,7 +27,6 @@ class CaesarCipher(tk.Frame):
             font=('Arial', 22, 'bold'),
             text='Caesar Cipher'
         )
-
         self.title.grid(column=0, row=0, sticky=tk.EW, pady=35)
 
         self.text_widget = tk.Text(
@@ -53,7 +52,6 @@ class CaesarCipher(tk.Frame):
             text=f'Key (1-{self.num_letters -1})',
             justify=tk.CENTER
         )
-
         self.key_label.grid(column=0, row=2, pady=(38, 10))
 
         self.buttons_container = tk.Frame(self.main_frame, bg=self.color1)
@@ -78,7 +76,6 @@ class CaesarCipher(tk.Frame):
             state=tk.DISABLED,
             command=self.encrypt_command
         )
-
         self.button_encript.grid(column=0, row=0, ipadx=5, ipady=5)
 
         self.button_decript = tk.Button(
@@ -97,7 +94,6 @@ class CaesarCipher(tk.Frame):
             state=tk.DISABLED,
             command=self.decrypt_command
         )
-
         self.button_decript.grid(column=2, row=0, ipadx=5, ipady=5)
 
         self.key_entry_validation_command = self.buttons_container.register(self.key_entry_validation)
@@ -117,14 +113,7 @@ class CaesarCipher(tk.Frame):
             validate='key',
             validatecommand=(self.key_entry_validation_command, '%P')
         )
-
-
-
-
-
-
         self.key_entry.grid(column=1, row=0, ipady=9)
-
 
     def encrypt_decrypt(self, text, mode, key):
         result = ''
