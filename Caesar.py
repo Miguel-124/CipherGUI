@@ -10,7 +10,6 @@ class CaesarCipher(tk.Frame):
         self.letters = 'abcdefghijklmnopqrstuvwxyz'
         self.num_letters = len(self.letters)
 
-
         super().__init__(
             root,
             bg=self.color1
