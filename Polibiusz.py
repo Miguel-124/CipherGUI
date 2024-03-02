@@ -103,3 +103,4 @@ class PolibiuszCipher(tk.Frame):
         self.text_widget.delete("1.0", tk.END)
         self.text_widget.insert("1.0", plaintext)
 
+
