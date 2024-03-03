@@ -100,6 +100,7 @@ class PolibiuszCipher(tk.Frame):
                         break
                 i += 1
             i += 1
+
         self.text_widget.delete("1.0", tk.END)
         self.text_widget.insert("1.0", plaintext)
 
