@@ -92,7 +92,6 @@ class PolibiuszCipher(tk.Frame):
         while i < len(ciphertext):
             if ciphertext[i] == ' ':
                 plaintext += ' '
-
             else:
                 code = ciphertext[i:i+2]
                 for char, value in self.alphabet.items():
