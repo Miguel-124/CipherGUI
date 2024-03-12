@@ -153,4 +153,5 @@ class PlayfairCipher(tk.Frame):
                 plaintext += grid[row1][col2] + grid[row2][col1]
 
         self.text_widget.delete("1.0", tk.END)
+
         self.text_widget.insert("1.0", plaintext)
