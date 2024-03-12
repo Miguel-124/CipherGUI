@@ -36,6 +36,7 @@ class PlayfairCipher(tk.Frame):
         )
         self.text_widget.grid(column=0, row=1, padx=100)
 
+
         self.button_encrypt = tk.Button(
             self,
             bg=self.color2,
