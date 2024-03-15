@@ -62,6 +62,7 @@ class CaesarCipher(tk.Frame):
 
         self.button_encript = tk. Button(
             self.buttons_container,
+
             bg=self.color2,
             fg=self.color1,
             activebackground=self.color3,
