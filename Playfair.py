@@ -143,7 +143,6 @@ class PlayfairCipher(tk.Frame):
             row1, col1 = self.find_position(grid, pair[0])
             row2, col2 = self.find_position(grid, pair[1])
 
-
             if row1 is None or col1 is None or row2 is None or col2 is None:
                 continue  # Pomijaj litery, które nie występują w siatce szyfru
 
